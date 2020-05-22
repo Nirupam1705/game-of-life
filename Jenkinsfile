@@ -12,6 +12,7 @@ pipeline {
         stage ('package') {
             steps {
                 sh 'mvn clean package'
+                input message 'exxcute this step' submitter 'nirupm1705'
             }
         }
 
