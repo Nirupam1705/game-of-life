@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage('source'){
             steps {
-                git 'https://github.com/Nirupam1705/game-of-life.git'
-                BRANCH: "${params.BUILD_BRANCH}"
+                git 'https://github.com/Nirupam1705/game-of-life.git', branch: "${params.BUILD_BRANCH}"
             }
         }
         stage ('package') {
