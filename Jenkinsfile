@@ -10,7 +10,7 @@ pipeline {
         stage('source'){
             steps {
                 git 'https://github.com/Nirupam1705/game-of-life.git'
-                ${params.BUILD_BRANCH}
+                BRANCH: "${params.BUILD_BRANCH}"
             }
         }
         stage ('package') {
