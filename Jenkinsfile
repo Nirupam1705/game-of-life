@@ -2,7 +2,7 @@ pipeline {
     agent {label 'master'}
     triggers{
         upstream (upstreamProjects: 'fake', threshold: hudson.model.Result.SUCCESS)
-        corn('* * * * *')
+        cron('* * * * *')
     }
     stages {
         stage('source'){
