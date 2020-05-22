@@ -2,7 +2,7 @@ pipeline {
     agent {label 'master'}
     triggers{
         upstream (upstreamProjects: 'fake', threshold: hudson.model.Result.SUCCESS)
-        pollSCM('* * * * *')
+        corn('* * * * *')
     }
     stages {
         stage('source'){
