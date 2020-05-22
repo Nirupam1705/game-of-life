@@ -1,5 +1,8 @@
 pipeline {
     agent {label 'master'}
+    triggers{
+        upstream (upstreamProjects: 'fake', threshold: hudson.model.Result.SUCCESS)
+    }
     stages {
         stage('source'){
             steps {
